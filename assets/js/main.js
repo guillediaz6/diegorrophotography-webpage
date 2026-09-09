@@ -67,10 +67,10 @@ if (manifestoEl) {
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         words.forEach((w,i)=>{
-          setTimeout(()=>w.classList.add('lit'), i*750);
+          setTimeout(()=>w.classList.add('lit'), i*500);
         });
         if (manifestoBody) {
-          setTimeout(()=>manifestoBody.classList.add('lit'), words.length * 750 + 400);
+          setTimeout(()=>manifestoBody.classList.add('lit'), words.length * 500 + 350);
         }
         manifestoObserver.disconnect();
       }
