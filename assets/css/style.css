@@ -702,9 +702,9 @@ section{position:relative;background:transparent;}
   .footer-centered{padding:30px 20px;gap:18px;margin-top:0;}
   .footer-legal{font-size:10px;}
   /* Manifesto */
-  .manifesto{min-height:75vh;padding:100px 20px;}
-  .manifesto-title{font-size:clamp(38px,11vw,76px);line-height:1.06;}
-  .manifesto-body{font-size:14px;margin-top:36px;max-width:92%;}
+  .manifesto{min-height:auto;padding:80px 20px;}
+  .manifesto-title{font-size:clamp(30px,9vw,54px);line-height:1.1;word-break:normal;overflow-wrap:break-word;}
+  .manifesto-body{font-size:15px;margin-top:28px;max-width:94%;line-height:1.75;}
   /* WhatsApp */
   .float-wa{bottom:20px;right:20px;width:50px;height:50px;}
   .float-wa svg{width:26px;height:26px;}

@@ -75,7 +75,7 @@ if (manifestoEl) {
         manifestoObserver.disconnect();
       }
     });
-  },{threshold:.25});
+  },{threshold:.15});
   manifestoObserver.observe(manifestoEl);
 }
 
