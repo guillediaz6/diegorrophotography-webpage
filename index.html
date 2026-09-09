@@ -263,15 +263,58 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="contact-title reveal">Hagamos algo<br>digno de<br><span class="it">recordar.</span></div>
-  <div class="contact-row reveal">
-    <a href="mailto:diegorrophotography@gmail.com" class="contact-email">diegorrophotography@gmail.com</a>
-  </div>
-  <a href="mailto:diegorrophotography@gmail.com" class="contact-cta reveal"><span>Iniciar un proyecto →</span></a>
-</section>
+<!-- SVG ClipPath for Organic Top Curve -->
+<svg width="0" height="0" style="position:absolute;pointer-events:none;" aria-hidden="true">
+  <defs>
+    <clipPath id="contactTopCurveClip" clipPathUnits="objectBoundingBox">
+      <path d="M 0,0 C 0.35,0.005 0.65,0.065 1,0.075 L 1,1 L 0,1 Z" />
+    </clipPath>
+  </defs>
+</svg>
 
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+  <div class="contact-3d">
+    <!-- Curva superior orgánica descendente de izquierda a derecha -->
+    <div class="contact-top-curve" aria-hidden="true">
+      <svg viewBox="0 0 1 1" preserveAspectRatio="none">
+        <path d="M 0,0 C 0.35,0.005 0.65,0.065 1,0.075" vector-effect="non-scaling-stroke" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none" />
+      </svg>
+    </div>
+
+    <div class="contact-inner">
+
+      <!-- Título principal -->
+      <h2 class="contact-title">
+        Hagamos algo<br>digno de<br><span class="it">recordar.</span>
+      </h2>
+
+      <!-- Línea cinematográfica animada -->
+      <div class="contact-line"></div>
+
+      <!-- Bloque de canales de contacto -->
+      <div class="contact-credits">
+        <div class="credit-block">
+          <span class="credit-label">ESCRÍBEME</span>
+          <a href="mailto:diegorrophotography@gmail.com" class="credit-value email-hover">diegorrophotography@gmail.com</a>
+        </div>
+        <div class="credit-block">
+          <span class="credit-label">HABLEMOS</span>
+          <a href="https://wa.me/34689778220" target="_blank" rel="noopener noreferrer" class="credit-value">+34 689 77 82 20</a>
+        </div>
+        <div class="credit-block">
+          <span class="credit-label">SÍGUEME</span>
+          <a href="https://www.instagram.com/diegorrophotography/" target="_blank" rel="noopener noreferrer" class="credit-value">@diegorrophotography</a>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="contact-camera-wrap">
+      <img src="assets/images/camara.png" alt="Cámara fotográfica" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
 <!-- FOOTER -->
 <footer class="reveal footer-centered">
   <div class="footer-legal">

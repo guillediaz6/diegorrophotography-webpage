@@ -36,9 +36,13 @@ mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
 /* ===== REVEAL ON SCROLL ===== */
 const revealObserver = new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){ entry.target.classList.add('is-visible'); }
+    if(entry.isIntersecting){ 
+      entry.target.classList.add('is-visible'); 
+    } else {
+      entry.target.classList.remove('is-visible');
+    }
   });
-},{threshold:.15});
+},{threshold:.10});
 document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 
 /* ===== LIGHTBOX ===== */
@@ -56,16 +60,22 @@ lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) lightbox.class
 
 /* ===== MANIFESTO PROGRESSIVE REVEAL ===== */
 const words = document.querySelectorAll('#manifestoTitle .word');
+const manifestoBody = document.querySelector('.manifesto-body');
 const manifestoEl = document.querySelector('.manifesto');
 if (manifestoEl) {
   const manifestoObserver = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
-        words.forEach((w,i)=>{ setTimeout(()=>w.classList.add('lit'), i*350); });
+        words.forEach((w,i)=>{
+          setTimeout(()=>w.classList.add('lit'), i*750);
+        });
+        if (manifestoBody) {
+          setTimeout(()=>manifestoBody.classList.add('lit'), words.length * 750 + 400);
+        }
         manifestoObserver.disconnect();
       }
     });
-  },{threshold:.3});
+  },{threshold:.25});
   manifestoObserver.observe(manifestoEl);
 }
 
