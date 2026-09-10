@@ -240,19 +240,8 @@ nav.primary-nav a:hover::after{width:100%;}
   color:rgba(236,231,224,.9);
   letter-spacing:.24em;
 }
-.hero-bottom{
-  position:absolute;bottom:26px;left:0;width:100%;
-  display:flex;justify-content:space-between;align-items:flex-end;
-  padding:0 32px;
-  font-size:10px;letter-spacing:.14em;color:var(--grey);
-  z-index:3;
-}
-.scroll-cue{display:flex;align-items:center;gap:10px;}
-.scroll-cue .line{width:1px;height:34px;background:var(--grey);position:relative;overflow:hidden;}
-.scroll-cue .line::after{content:"";position:absolute;top:-100%;left:0;width:100%;height:100%;background:var(--red);animation:cueDrop 2.2s var(--ease) infinite;}
-@keyframes cueDrop{0%{top:-100%}60%{top:100%}100%{top:100%}}
+
 @media (max-width:700px){
-  .hero-bottom{flex-direction:column;align-items:flex-start;gap:14px;bottom:18px;padding:0 20px;}
   .wall{
     inset:-20% -40%;
     width:180%;height:140%;
@@ -391,7 +380,7 @@ section{position:relative;background:transparent;}
   content:"";
   position:absolute;
   inset:-16px;
-  background:url('../images/fondo.png') center / 100% 100% no-repeat;
+  background:url('../images/fondo.webp') center / 100% 100% no-repeat;
   filter:blur(10px);
   transform:scale(1.05);
   z-index:0;
@@ -742,4 +731,4 @@ section{position:relative;background:transparent;}
 
 
 /* ============ PERFORMANCE OPTIMIZATIONS ============ */
-#archive, #about, .manifesto { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+#archive, #about { content-visibility: auto; contain-intrinsic-size: auto 800px; }
